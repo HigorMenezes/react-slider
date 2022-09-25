@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-slider/static/css/main.ab3c17d5.css",
+    "main.js": "/react-slider/static/js/main.ce878e1a.js",
+    "static/js/787.66f82ece.chunk.js": "/react-slider/static/js/787.66f82ece.chunk.js",
+    "index.html": "/react-slider/index.html",
+    "main.ab3c17d5.css.map": "/react-slider/static/css/main.ab3c17d5.css.map",
+    "main.ce878e1a.js.map": "/react-slider/static/js/main.ce878e1a.js.map",
+    "787.66f82ece.chunk.js.map": "/react-slider/static/js/787.66f82ece.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ab3c17d5.css",
+    "static/js/main.ce878e1a.js"
+  ]
+}
