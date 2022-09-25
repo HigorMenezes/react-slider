@@ -1,0 +1,85 @@
+.slider {
+  /* slider vars */
+  --slider-min-width: 300px;
+  --slider-thumb-size: 40px;
+  --slider-tick-mark-size: 4px;
+  --slider-track-height: 10px;
+
+  /* slider style */
+  box-sizing: border-box;
+
+  position: relative;
+  isolation: isolate;
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+
+  min-width: var(--slider-min-width);
+  min-height: var(--slider-thumb-size);
+}
+
+.slider::before {
+  position: absolute;
+  inset-inline: 0;
+  content: "";
+  height: var(--slider-track-height);
+  border-radius: 99999px;
+  background: var(--color-primary);
+}
+
+.slider__thumb {
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: 0%;
+  transform: translate(-50%, -50%);
+
+  width: var(--slider-thumb-size);
+  height: var(--slider-thumb-size);
+  border-radius: 99999px;
+  background: var(--color-secondary);
+  cursor: grab;
+
+  z-index: 1;
+}
+
+.slider__thumb:focus {
+  outline: solid 2px white;
+  z-index: 2;
+}
+
+.slider__track {
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: 0%;
+  transform: translateY(-50%);
+
+  height: var(--slider-track-height);
+  border-radius: 99999px;
+  background: var(--color-accent);
+}
+
+.slider.slider--animation .slider__thumb,
+.slider.slider--animation .slider__track {
+  transition: inset 0.1s;
+}
+
+.slider__tick-mark {
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: 0%;
+  transform: translate(-50%, -50%);
+
+  height: var(--slider-tick-mark-size);
+  width: var(--slider-tick-mark-size);
+  border-radius: 99999px;
+  background: var(--color-accent);
+}
+
+.slider__tick-mark.active {
+  background: white;
+}
+
+.slider.slider--animation .slider__tick-mark {
+  transition: background 0.1s;
+}
